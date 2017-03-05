@@ -27,4 +27,15 @@ public void printBitMode(int holder)
 {
 	Debug.Log (Convert.ToString (holder, 2).PadLeft (16, '0') + "[" + holder + "]");	
 }
-//hod to use
+//how to use
+
+public void Main(){
+	int a = 0; //create a bit holder
+	printBitMode (a); // output 0000000000000000[0]
+	a = setBit (a, 1, 4); // set bit in a holder (a) to 1 in the bit postion 4 (5th bit)
+	printBitMode (a); // output 0000000000010000[16]
+	a = setBit (a, 1, 0); // set bit in a holder (a) to 1 in the bit postion 0 (1st bit)
+	printBitMode (a); // output 0000000000010001[17]
+	a = setBit (a, 0, 4); // set bit in a holder (a) to 0 in the bit postion 4 (5th bit)
+	printBitMode (a); // output 0000000000000001[1]
+}
